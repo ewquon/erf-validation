@@ -1,3 +1,4 @@
+import os, glob
 import numpy as np
 import xarray as xr
 
@@ -8,7 +9,8 @@ def load_erf_les(dpath='.',output_interval=1.0,Tavg=3600.):
     try:
         ds = xr.open_dataset(fpath)
         print('Loaded',fpath)
-    except:
+    except FileNotFoundError:
+        from erftools.postprocessing import AveragedProfiles
         print('Processing',dpath)
         pro = AveragedProfiles(f'{dpath}/mean_profiles.dat',
                                f'{dpath}/covar_profiles.dat',
@@ -20,15 +22,15 @@ def load_erf_les(dpath='.',output_interval=1.0,Tavg=3600.):
         ds = ds.mean('t')
         ds['hvelmag'] = np.sqrt(ds['u']**2 + ds['v']**2)
         ds.to_netcdf(fpath)
-    finally:
-        return ds
+    return ds
 
 def load_erf_scm(dpath='.',dt=1.0,Tavg=3600.):
     fpath = f'{dpath}/profiles.nc'
     try:
         ds = xr.open_dataset(fpath)
         print('Loaded',fpath)
-    except:
+    except FileNotFoundError:
+        from erftools.postprocessing import Column
         print('Processing SCM',dpath)
         # select plotfiles
         istart = int(np.round((Tsim - Tavg)/dt))
@@ -62,5 +64,4 @@ def load_erf_scm(dpath='.',dt=1.0,Tavg=3600.):
         ds["θ'w'"] = -Kh * dTdz
         # save
         ds.to_netcdf(fpath)
-    finally:
-        return ds
+    return ds
