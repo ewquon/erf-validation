@@ -36,9 +36,9 @@ Development of the two-dimensional squall line - vectors of velocity colored by 
 
 The squall line simulation at (top) $3000$ [s], (middle) $6000$ [s], and (bottom) $9000$ [s]. The orange contour denotes the cloud $q_{c} = 10^{-5}$ [kg/kg] and the perturbation potential temperature is given by $\theta_{d}^{\prime} = \theta_{d}(t) - \theta_{d}(0)$ [K]. Note, the horizontal $x$-direction has been clipped to $[-60, 60]$ [km] to highlight the region of interest around the cloud.
 
-
   <figure>
     <img src="Squall_Line_Rain_Accum.png" alt="Rain Accumulation" style="width: 50%;">
   </figure>
+The rain accumulation, $h(x;t)$, obtained from ERF (solid lines) versus WRF (markers) for the squall line case.
 </div>
 
