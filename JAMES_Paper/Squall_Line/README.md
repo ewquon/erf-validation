@@ -11,11 +11,9 @@ A domain size of $(L_x, L_z) = (150\times 10^3, 24\times 10^3)$ [m], with grid r
     <div style="display: flex; justify-content: space-around;">
       <div style="width: 85%;">
         <img src="SL1.png" alt="SL1" style="width: 100%;">
-        <figcaption>(a)</figcaption>
       </div>
       <div style="width: 85%;">
         <img src="SL2.png" alt="SL2" style="width: 100%;">
-        <figcaption>(b)</figcaption>
       </div>
     </div>
   </figure>
