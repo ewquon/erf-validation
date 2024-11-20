@@ -1,6 +1,6 @@
 # Three-dimensional super cell
 
-Results presented herein were generated with ERF hash: **9428c70** and the test directory [3DSupercell](https://github.com/erf-model/ERF/tree/development/Exec/MoistRegTests/SuperCell_3D).
+Results presented herein were generated with ERF hash: **9428c70** and the test directory [3DSupercell](https://github.com/erf-model/ERF/tree/9428c70c5c299fd8c11bc0b15634b917e16bdf7b/Exec/MoistRegTests/SuperCell_3D).
 
 
 The three-dimensional super cell test case involves domain lengths of $(L_x, L_y, L_z) = (150 \times 10^3, 100 \times 10^3, 24 \times 10^3)$ [m] and grid resolutions of $(\Delta x, \Delta y, \Delta z) = (250, 250, 250)$ [m]. The simulation is run for 2 hours, with an RK3 time step of 0.5 [s] and 2 acoustic sub-steps in the last RK stage. Periodic boundary conditions are applied in the stream-wise direction and open boundary conditions are implemented in the span-wise direction. A slip-wall boundary condition is used at the bottom while an outflow condition is applied at the top – i.e., linear extrapolation for scalar quantities and Neumann conditions for the vertical velocity. The 3rd order upwind scheme was used for advection and Kessler microphysics was utilized for moisture. Constant diffusivities of $\nu = \alpha_{i} = 33.33$ $m^2$/s were used for momentum and all scalars; no turbulence model was employed.
