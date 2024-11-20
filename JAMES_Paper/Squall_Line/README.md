@@ -1,6 +1,6 @@
 # Squall Line
 
-Results presented herein were generated with ERF hash: **9428c70** and [inputs file](https://github.com/erf-model/ERF/blob/development/Exec/MoistRegTests/SquallLine_2D/inputs_moisture_Gabersek) .
+Results presented herein were generated with ERF hash: **9428c70** and [inputs file](https://github.com/erf-model/ERF/blob/9428c70c5c299fd8c11bc0b15634b917e16bdf7b/Exec/MoistRegTests/SquallLine_2D/inputs_moisture_Gabersek) .
 
 Raw data and python script for the rain accumulation figure are provided in the `Rain_Accum` directory.
     
