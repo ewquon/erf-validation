@@ -1,6 +1,6 @@
 # Flow Over Terrain
 
-Details regarding the Witch of Agnesi (WOA) test case may be found in [Srishar et al. (2022)](https://doi.org/10.5194/gmd-15-6259-2022).
+Details regarding the Witch of Agnesi (WOA) test case may be found in [Sridhar et al. (2022)](https://doi.org/10.5194/gmd-15-6259-2022).
     
 Results presented herein were generated with ERF hash: **9428c70** and inputs file: `inputs name`.
      
