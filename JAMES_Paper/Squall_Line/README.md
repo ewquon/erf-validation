@@ -20,7 +20,7 @@ A domain size of $(L_x, L_z) = (150\times 10^3, 24\times 10^3)$ [m], with grid r
     </div>
   </figure>
 
-*Development of the two-dimensional squall line -- vectors of velocity colored by velocity magnitude, $q_c$=$10^{-5}$ [kg/kg] isocontour (black line), and contours of rain are shown: (a) at $t$=1500 [s] showing the surface wind shear, buoyant updrafts, precipitation accumulation inside the cloud, and initial downdrafts, and (b) at $t$=7500 [s] showing the propagation of the squall line, the cold front, updrafts and downdrafts, precipitation, and the anvil structure of the cloud.*
+*Development of the two-dimensional squall line - vectors of velocity colored by velocity magnitude, \(q_c=10^{-5}\) [kg/kg] isocontour (black line), and contours of rain are shown: (a) at $t$=1500 [s] showing the surface wind shear, buoyant updrafts, precipitation accumulation inside the cloud, and initial downdrafts, and (b) at $t$=7500 [s] showing the propagation of the squall line, the cold front, updrafts and downdrafts, precipitation, and the anvil structure of the cloud.*
 
   <figure>
     <div style="display: flex; justify-content: space-around;">
