@@ -1,6 +1,6 @@
 # Wind farm models
 
-Results presented herein were generated with ERF hash: **9428c70** and the test directory [WindFarmTests](https://github.com/erf-model/ERF/tree/development/Exec/WindFarmTests/WindFarm).
+Results presented herein were generated with ERF hash: **653f9e3** and the test directory [WindFarmTests](https://github.com/erf-model/ERF/tree/653f9e3eb4c9403815458765855b636455e39a45/Exec/WindFarmTests/WindFarm).
 
 ERF supports four wind farm parameterizations that may be broadly grouped into mesoscale (Fitch, EWP) and LES (SAD, GAD) models. LES models employ grid spacings of $\mathcal{O}(10)$ [m] in all directions, whereas mesoscale models utilize $\mathcal{O}(10^2)$ [m] in the horizontal direction and $\mathcal{O}(10)$ [m] in the vertical. Consequently, mesoscale wind farm models are more appropriate for capturing farm--farm interactions, since they have potentially multiple turbines per cell, while LES models may capture turbine--turbine interactions. Mesoscale models generally assume the flow to be perpendicular to the turbine disk, and the area swept out by the turbine blade is only resolved in the vertical direction. By contrast, the increased resolution offered by LES models does allow them to resolve the area swept out by a turbine blade. The SAD model uses horizontal momentum sources that are based on one-dimensional momentum theory, whereas the GAD model computes momentum sources for all coordinate directions and is based on blade element theory, accounting for blade geometry. 
 
