@@ -22,7 +22,7 @@ Figure below shows the evolution of $q_c$, $q_r$, and $\theta_{d}^{\prime}$ ($y 
 
 
 ![Ray trace rendering](Supercell3D_Blender.png)
-Ray trace rendering of the supercell evolution highlighting the main features. Isocontours of cloud water ($q_c = 10^-5$ [kg/kg]) in white and rain water ($q_r = 10^-4$ [kg/kg]) in blue are shown.
+Ray trace rendering of the supercell evolution highlighting the main features. Isocontours of cloud water ($q_c = 10^{-5}$ [kg/kg]) in white and rain water ($q_r = 10^{-4}$ [kg/kg]) in blue are shown.
 
 ---
 
