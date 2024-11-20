@@ -1,5 +1,7 @@
 # Squall Line
 
+Details regarding the Squall Line test case may be found in [Gabersek et al. (2011)](https://doi.org/10.1175/MWR-D-11-00144.1).
+    
 Results presented herein were generated with ERF hash: **9428c70** and inputs files: `inputs name`.
 
 Raw data and python script for the rain accumulation figure are provided in the `Rain_Accum` directory.
