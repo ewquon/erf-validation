@@ -1,5 +1,7 @@
 # Three-dimensional super cell
 
+Details regarding the Super Cell test case may be found in [Tissaoui et al. (2023)](https://doi.org/10.1029/2022MS003283).
+
 Results presented herein were generated with ERF hash: **653f9e3** and the inputs file [3DSupercell](https://github.com/erf-model/ERF/blob/653f9e3eb4c9403815458765855b636455e39a45/Exec/MoistRegTests/SuperCell_3D/inputs_moisture_Tissaoui).
 
 
