@@ -8,7 +8,7 @@ Specification of the terrain height at the bottom of the domain follows $z(x) = 
   <img src="WoA_mesh.png" alt="Vertically stretched mesh" width="40%" height="40%" style="margin-right: 10px;"> <img src="WoA_zvel.png" alt="Vertical velocity profile" width="50%" height="50%">
 </div>
 
-**Vertically stretched mesh and Vertical velocity profile for the Witch of Agnesi (WOA) hill.**
+*Vertically stretched mesh and Vertical velocity profile for the Witch of Agnesi (WOA) hill.*
 
 
 
