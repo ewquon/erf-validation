@@ -40,4 +40,4 @@ The squall line simulation at (top) $3000$ [s], (middle) $6000$ [s], and (bottom
     <img src="Squall_Line_Rain_Accum.png" alt="Rain Accumulation" style="width: 50%;">
   </figure>
 
-_The rain accumulation, $h(x;t)$, obtained from ERF (solid lines) versus WRF (markers) for the squall line case._
+The rain accumulation, $h(x;t)$, obtained from ERF (solid lines) versus WRF (markers) for the squall line case.
