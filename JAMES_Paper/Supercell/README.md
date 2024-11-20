@@ -1,8 +1,8 @@
 # Three-dimensional super cell
 
 Details regarding the Super Cell test case may be found in [Tissaoui et al. (2023)](https://doi.org/10.1029/2022MS003283).
-    
-Results presented herein were generated with ERF hash: **9428c70** and the test directory [3DSupercell](https://github.com/erf-model/ERF/tree/development/Exec/MoistRegTests/SuperCell_3D).
+
+Results presented herein were generated with ERF hash: **653f9e3** and the inputs file [3DSupercell](https://github.com/erf-model/ERF/blob/653f9e3eb4c9403815458765855b636455e39a45/Exec/MoistRegTests/SuperCell_3D/inputs_moisture_Tissaoui).
 
 
 The three-dimensional super cell test case involves domain lengths of $(L_x, L_y, L_z) = (150 \times 10^3, 100 \times 10^3, 24 \times 10^3)$ [m] and grid resolutions of $(\Delta x, \Delta y, \Delta z) = (250, 250, 250)$ [m]. The simulation is run for 2 hours, with an RK3 time step of 0.5 [s] and 2 acoustic sub-steps in the last RK stage. Periodic boundary conditions are applied in the stream-wise direction and open boundary conditions are implemented in the span-wise direction. A slip-wall boundary condition is used at the bottom while an outflow condition is applied at the top – i.e., linear extrapolation for scalar quantities and Neumann conditions for the vertical velocity. The $3^{\rm rd}$ order upwind scheme was used for advection and Kessler microphysics was utilized for moisture. Constant diffusivities of $\nu = \alpha_{i} = 33.33$ $m^2$/s were used for momentum and all scalars; no turbulence model was employed.
@@ -24,7 +24,7 @@ Figure below shows the evolution of $q_c$, $q_r$, and $\theta_{d}^{\prime}$ ($y 
 
 
 ![Ray trace rendering](Supercell3D_Blender.png)
-Ray trace rendering of the supercell evolution highlighting the main features. Isocontours of cloud water ($q_c = 10^-5$ [kg/kg]) in white and rain water ($q_r = 10^-4$ [kg/kg]) in blue are shown.
+Ray trace rendering of the supercell evolution highlighting the main features. Isocontours of cloud water ($q_c = 10^{-5}$ [kg/kg]) in white and rain water ($q_r = 10^{-4}$ [kg/kg]) in blue are shown.
 
 ---
 

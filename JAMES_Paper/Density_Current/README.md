@@ -2,7 +2,7 @@
 
 Details regarding the Density Current test case may be found in [Straka et al. (1993)](https://doi.org/10.1002/fld.1650170103).
     
-Results presented herein were generated with ERF hash: **9428c70** and inputs files: `inputs_crse_halfdomain` and `inputs_crse_halfdomain_amr`. We note that the anelastic option may be activated in the inputs files by setting *erf.anelastic = 1*.
+Results presented herein were generated with ERF hash: **9428c70** and inputs files: [inputs_crse_halfdomain](https://github.com/erf-model/ERF/blob/9428c70c5c299fd8c11bc0b15634b917e16bdf7b/Exec/DryRegTests/DensityCurrent/inputs_crse_halfdomain) and [inputs_crse_halfdomain_amr](https://github.com/erf-model/ERF/blob/9428c70c5c299fd8c11bc0b15634b917e16bdf7b/Exec/DryRegTests/DensityCurrent/inputs_amr). We note that the anelastic option may be activated in the inputs files by setting *erf.anelastic = 1*.
     
 The test case is two-dimensional with domain lengths $(L_x, L_z) = (25.6\times 10^3, 6.4\times 10^3)$ [m] and has a grid resolution of $(\Delta x, \Delta z) = (100.0, 100.0)$ [m]. The simulation is run for 900 [s] of simulated time with an RK3 time step of 1.0 [s] and 4 acoustic sub-steps in the last RK stage. The left boundary employs a symmetry condition while the right boundary is an outflow condition. The top and bottom boundaries are slip walls. The $3^{\rm rd}$ order upwind scheme and constant diffusivities of $\nu$ = $\alpha_{\theta}$ = 75 [ $m^{2}$ /s] were employed; no turbulence model was used. 
     
