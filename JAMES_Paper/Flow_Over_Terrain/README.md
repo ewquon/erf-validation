@@ -19,7 +19,7 @@ The `ExactSolution` directory has the routine to compute the analytical solution
 mpicxx -std=c+++14 main.cpp -o WoA.exe
 ./WoA.exe
 ```
-
+This writes out the vertical velocity contours into a `vtk` file - `WoA_zvel.vtk` that can be read in VisIt or ParaView.
 
 
 
