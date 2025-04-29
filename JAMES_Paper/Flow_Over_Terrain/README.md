@@ -12,5 +12,14 @@ Specification of the terrain height at the bottom of the domain follows $z(x) = 
 
 *Vertically stretched mesh and vertical velocity profile for the Witch of Agnesi (WOA) hill.*
 
+## Analytical solution
+
+The `ExactSolution` directory has the routine to compute the analytical solution for this test case. See sections 3.7 and 6.7 in [Giradlo and Restelli (2008)](https://www.sciencedirect.com/science/article/abs/pii/S0021999107005384). The analytical solution is computed following [Smith (1979)](https://www.tandfonline.com/doi/pdf/10.3402/tellusa.v32i4.10590). The figure below shows the comparison with Fig. 12(b) of [Giradlo and Restelli (2008)](https://www.sciencedirect.com/science/article/abs/pii/S0021999107005384). The routine can be compiled and run as 
+```
+mpicxx -std=c+++14 main.cpp -o WoA.exe
+./WoA.exe
+```
+
+
 
 
