@@ -21,5 +21,5 @@ mpicxx -std=c+++14 main.cpp -o WoA.exe
 ```
 This writes out the vertical velocity contours into a `vtk` file - `WoA_zvel.vtk` that can be read in VisIt or ParaView.
 
-
+**UPDATE**: An alternative python script (`WOA_1D_FFT.py`) has been provided with improved agreement with Giraldo and Restelli.
 
