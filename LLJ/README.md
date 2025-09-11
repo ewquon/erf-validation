@@ -1,16 +1,22 @@
-# GABLS1
+# ORACLES: LLJ Case Study
 
-For details of the study, see: Beare et al 2006 BLM (LES intercomparison),
-Cuxart et al 2006 BLM (SCM intercomparison), and the Holtslag et al 2011
-report from the ECMWF GABLS Workshop for an overview.
+A lidar buoy was deployed at Morro Bay, CA (35.71074°N, 121.84606°W) between
+2020-10-17 and 2021-10-16 (see Krishnamurthy et al., 2023 Earth Syst. Sci.
+Data). This validation dataset can be downloaded from the DOE Wind Data Hub:
 
-These cases were last run with commit f97cda0460a6f30eea16a7b988569f4494c2181e
-compiled with the `ERF_EXPLICIT_MOST_STRESS` option. Results are for 3.125 m
-grid spacing.
+> Wind Data Hub. buoy/lidar.z06.b0. 2021.
+> Maintained by Wind Data Hub for U.S. Department of Energy,
+> Office of Energy Efficiency and Renewable Energy
+> DOI: https://www.osti.gov/search/semantic:10.21947/1959721
+> Accessed: 08 09 2025.
 
-The analysis presented here builds upon the load_data tools from
-https://github.com/Exawind/wind-energy/tree/master/GABLS and includes the
-following simulation data as a reference:
+These cases were last run with commit ...
 
-* AMR-Wind results from commit daaf47081e384bd9ff05b0ce4a520682783593aa
-* Nalu-Wind results from commit 1a49e8da490146698c8645700e1e37ab5931904f
+# Mesoscale
+
+NWP comparison with WRF, using initial/boundary conditions from ERA5
+
+# Microscale
+
+Anelastic LES comparison with PINACLES, using initial/boundary conditions from
+the HRRR
