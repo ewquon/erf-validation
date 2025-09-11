@@ -16,6 +16,8 @@ These cases were last run with commit ...
 
 NWP comparison with WRF, using initial/boundary conditions from ERA5
 
+Reference WRF inputs from Geng Xia, NREL
+
 # Microscale
 
 Anelastic LES comparison with PINACLES, using initial/boundary conditions from
