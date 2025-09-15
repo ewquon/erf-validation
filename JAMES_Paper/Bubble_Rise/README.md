@@ -2,6 +2,7 @@
 
 
 Details regarding the Bubble Rise test case may be found in [Bryan & Fritsch (2002)](https://doi.org/10.1175/1520-0493(2002)130<2917:ABSFMN>2.0.CO;2).
+Their original code is archived in the `BryanFritsch2002` folder.
     
 Results presented herein were generated with ERF hash: **9428c70** with [inputs file for dry bubble](https://github.com/erf-model/ERF/blob/9428c70c5c299fd8c11bc0b15634b917e16bdf7b/Exec/MoistRegTests/Bubble/inputs_BF02_dry_bubble) and [inputs file for moist bubble](https://github.com/erf-model/ERF/blob/9428c70c5c299fd8c11bc0b15634b917e16bdf7b/Exec/MoistRegTests/Bubble/inputs_BF02_moist_bubble).
     
