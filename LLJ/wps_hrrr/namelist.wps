@@ -1,0 +1,51 @@
+&share
+ wrf_core = 'ARW',
+ max_dom = 1,
+ start_date = '2021-07-20_00:00:00',
+!start_date = '2021-07-20_17:00:00', ! restart
+ end_date   = '2021-07-21_16:00:00',
+!end_date   = '2021-07-21_01:00:00', ! workaround: force wrfbdy to have last hr since erf doesn't read the TEND fields
+ interval_seconds = 3600
+/
+
+! COARSE GRID for testing
+! prob_extent  = 320e3, 500e3, 10e3
+! n_cell       = 128,   200,   200
+! INTERMEDIATE GRID for testing
+! prob_extent  = 320e3, 500e3, 10e3
+! n_cell       = 320,   500,   200
+! PINACLES level 0
+! prob_extent  = 320e3, 512e3, 10e3
+! n_cell       = 1280,  2048,  300
+&geogrid
+ parent_id         =   1,
+ parent_grid_ratio =   1,
+ i_parent_start    =   1,
+ j_parent_start    =   1,
+ e_we              =  1281,
+ e_sn              =  2049,
+ geog_data_res = 'default','default',
+ dx = 250,
+ dy = 250,
+ map_proj = 'lambert',
+!             PINACLES     ORACLE
+!             --------     ------
+ ref_lat   =   35.85,   !  37.0,
+ ref_lon   =  -123.72,  ! -120.5,
+ truelat1  =   36.05,   !  38,
+ truelat2  =   36.05,   !  38,
+ stand_lon =  -65.0,    ! 262.5,
+ geog_data_path = '/projects/erf/wps-inputs/geog'
+ opt_geogrid_tbl_path = './'
+/
+
+&ungrib
+ out_format = 'WPS',
+ prefix = 'HRRR',
+/
+
+&metgrid
+ fg_name = 'HRRR'
+ io_form_metgrid = 2,
+ opt_metgrid_tbl_path = './'
+/

@@ -22,3 +22,5 @@ Reference WRF inputs from Geng Xia, NREL
 
 Anelastic LES comparison with PINACLES, using initial/boundary conditions from
 the HRRR
+
+Vtable for HRRR (3D pressure level data) provided by David Wiersema, LLNL
