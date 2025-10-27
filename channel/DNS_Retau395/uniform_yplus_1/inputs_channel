@@ -1,0 +1,83 @@
+# ------------------  INPUTS TO MAIN PROGRAM  -------------------
+# Re_tau = h = 395
+
+erf.anelastic = 1
+erf.use_fft   = true
+
+stop_time = 20.0 # nondimensional time, t * utau / h
+
+#amrex.fpe_trap_invalid = 1
+
+# PROBLEM SIZE & GEOMETRY
+# uniform grid
+# dx+ = 10  dy+ = 6.5  dz+ = 1.0
+geometry.prob_extent =  6.2831853072  3.1415926536  2  # normalized by h
+amr.n_cell           =  256  192  768
+
+geometry.is_periodic = 1 1 0
+
+zlo.type        = NoSlipWall
+zhi.type        = NoSlipWall
+
+erf.init_type = uniform
+
+# TIME STEP CONTROL
+#erf.cfl = 0.5
+erf.fixed_dt        = 0.00015
+
+# DIAGNOSTICS & VERBOSITY
+erf.sum_interval   = 1       # timesteps between computing mass
+erf.v              = 1       # verbosity in ERF.cpp
+amr.v              = 1       # verbosity in Amr.cpp
+erf.mg_v           = 1
+
+# planar averaging
+erf.data_log    = surf_hist.dat mean_profiles.dat flux_profiles.dat
+erf.profile_int = 20
+erf.destag_profiles = false
+
+# REFINEMENT / REGRIDDING
+amr.max_level       = 0       # maximum level number allowed
+
+# CHECKPOINT FILES
+erf.check_file      = chk        # root name of checkpoint file
+erf.check_int       = 1000       # number of timesteps between checkpoints
+
+# PLOTFILES
+erf.plot_file_1     = plt       # prefix of plotfile name
+erf.plot_int_1      = 100       # number of timesteps between plotfiles
+erf.plot_vars_1     = x_velocity y_velocity z_velocity
+#erf.plot_vars_1     = x_velocity y_velocity z_velocity theta pert_pres dpdx dpdy dpdz
+
+# SOLVER CHOICE
+erf.dycore_horiz_adv_type   = "Blended_5th6th"
+erf.dycore_horiz_upw_frac   = 0.2
+erf.dycore_vert_adv_type    = "Blended_5th6th"
+erf.dycore_vert_upw_frac    = 0.2
+
+erf.use_gravity = false
+erf.use_coriolis = false
+
+erf.molec_diff_type = "Constant"
+erf.dynamic_viscosity = 0.00253164557 # == 1 / Re_tau
+
+#erf.abl_driver_type = "PressureGradient"
+#erf.abl_pressure_grad = -0.1329113924 0 0 # dp/dx == -2 * u_0 / Re_tau
+
+# maintain bulk velocity ≈ 17.54 (from integrating MKM99 ref profile)
+erf.const_massflux_x = 110.2369226035554
+erf.const_massflux_tau = 0.005 # ad hoc timescale for background pressure adjustment
+
+# INITIALIZATION
+prob.rho_0 = 1.0
+prob.T_0 = 300.
+
+# Poiseuille profile
+prob.prob_type = 21 # normal dir in z
+prob.u_0 = 26.25    # centerline vel
+
+# divergence free perturbations
+prob.pert_delta_u = 2.625
+prob.pert_delta_v = 2.625
+prob.pert_periods_u = 10
+prob.pert_periods_v = 10
