@@ -1,0 +1,18 @@
+# WPS
+*.exe
+*.TBL
+*.formatted
+*.output
+
+HRRR:*
+GRIBFILE.???
+
+*.nc
+
+met_em*
+
+# real.exe
+wrfinput*
+wrfbdy*
+wrffdda*
+
