@@ -1,0 +1,39 @@
+&share
+ wrf_core = 'ARW',
+ max_dom = 1,
+ start_date = '2021-07-19_12:00:00',
+ end_date   = '2021-07-21_00:00:00',
+ interval_seconds = 10800
+/
+
+&geogrid
+ parent_id         =   1,   1,   1,
+ parent_grid_ratio =   1,   1,   1,
+ i_parent_start    =   1,  50,  50,
+ j_parent_start    =   1,  45,  70,
+ e_we              =  550, 320, 300,
+ e_sn              =  550, 460, 370,
+ geog_data_res = 'default','default',
+ dx = 3000,
+ dy = 3000,
+ map_proj = 'lambert',
+ ref_lat   =  37.0,
+ ref_lon   = -120.5,
+ truelat1  =  38,
+ truelat2  =  38,
+ stand_lon = 262.5,
+ geog_data_path = '/projects/erf/wps-inputs/geog'
+ opt_geogrid_tbl_path = './'
+/
+
+&ungrib
+ out_format = 'WPS',
+ prefix = 'ERA5',
+/
+
+&metgrid
+ fg_name = 'ERA5'
+ io_form_metgrid = 2,
+!constants_name = 'ERA5_INVARIANT',
+ opt_metgrid_tbl_path = './'
+/
