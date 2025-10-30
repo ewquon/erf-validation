@@ -5,7 +5,7 @@ levels (approximately 50 m grid spacing, specified through `eta_levels` in the
 WRF namelist.input) were used in the FY25 Q4 report.
 
 The eta levels were estimated with this snippet:
-```
+```python
 from erftools.wrf import get_eta_levels
 nz = 200
 ztop = 10e3
