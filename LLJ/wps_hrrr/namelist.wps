@@ -2,9 +2,7 @@
  wrf_core = 'ARW',
  max_dom = 1,
  start_date = '2021-07-20_00:00:00',
-!start_date = '2021-07-20_17:00:00', ! restart
- end_date   = '2021-07-21_16:00:00',
-!end_date   = '2021-07-21_01:00:00', ! workaround: force wrfbdy to have last hr since erf doesn't read the TEND fields
+ end_date   = '2021-07-21_01:00:00', ! workaround: force wrfbdy to have last hr since erf doesn't read the TEND fields
  interval_seconds = 3600
 /
 
@@ -22,11 +20,17 @@
  parent_grid_ratio =   1,
  i_parent_start    =   1,
  j_parent_start    =   1,
- e_we              =  1281,
- e_sn              =  2049,
+! medium grid
+ e_we              =  321,
+ e_sn              =  501,
+ dx = 1000,
+ dy = 1000,
+! PINACLES level 0
+!e_we              =  281,
+!e_sn              =  2049,
+!dx = 250,
+!dy = 250,
  geog_data_res = 'default','default',
- dx = 250,
- dy = 250,
  map_proj = 'lambert',
 !             PINACLES     ORACLE
 !             --------     ------

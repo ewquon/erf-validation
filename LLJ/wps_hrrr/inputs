@@ -1,0 +1,113 @@
+# ------------------  INPUTS TO MAIN PROGRAM  -------------------
+# start/stop datetime should be read from wrfinput...
+start_datetime = "2021-07-20 00:00"
+stop_datetime  = "2021-07-21 00:00"
+
+amrex.fpe_trap_invalid = 0
+
+fabarray.mfiter_tile_size = 1024 1024 1024
+
+# PROBLEM SIZE & GEOMETRY
+geometry.prob_extent = 320e3    500e3    10e3
+amr.n_cell           = 1280     2048     300  # match PINACLES
+amr.n_cell           = 128      200      200  # test coarse
+amr.n_cell           = 320      500      200  # test medium, ~const dz
+
+geometry.is_periodic = 0 0 0
+
+# these shouldn't matter for wrfbdy input
+xlo.type = "Outflow" # "Open"
+xhi.type = "Outflow" # "Open"
+ylo.type = "Outflow" # "Open"
+yhi.type = "Outflow" # "Open"
+
+zlo.type               = "surface_layer"
+erf.most.z0            = 1e-4
+erf.most.zref          = 10.0
+#erf.most.include_wstar = true
+#erf.most.pblh_calc     = MYNN25
+
+zhi.type = "SlipWall"
+
+# TIME STEP CONTROL
+erf.fixed_dt        = 10.0   # coarse (dx=2500)
+erf.fixed_dt        = 4.0    # medium (dx=1000)
+erf.fixed_dt        = 3.0    # medium (dx=1000)
+erf.substepping_cfl = 0.5
+    
+# DIAGNOSTICS & VERBOSITY
+erf.sum_interval   = 1       # timesteps between computing mass
+erf.v              = 1       # verbosity in ERF.cpp
+amr.v              = 1       # verbosity in Amr.cpp
+
+# REFINEMENT / REGRIDDING
+amr.max_level       = 0       # maximum level number allowed
+
+# CHECKPOINT FILES
+erf.check_file      = chk     # root name of checkpoint file
+erf.check_int       = 900     # number of timesteps between checkpoints
+erf.check_int       = 1200     # number of timesteps between checkpoints
+
+# PLOTFILES
+erf.plot_file_1     = plt     # prefix of plotfile name
+erf.plot_int_1      = 200     # number of timesteps between plotfiles
+erf.plot_vars_1     = density x_velocity y_velocity z_velocity pressure theta Kmv Kmh
+
+# SOLVER CHOICE
+erf.use_gravity = true
+erf.terrain_type = StaticFittedMesh  # required for wrfinput
+
+erf.moisture_model  = "SatAdj"
+erf.moisture_model  = "Kessler"
+erf.moisture_model  = "SAM"
+
+#erf.les_type        = "None"
+####erf.les_type        = "Smagorinsky"
+####erf.Cs              = 0.17
+####erf.mix_isotropic   = 0
+
+erf.pbl_type        = "MYNN25"
+erf.pbl_type        = "MRF"
+erf.les_type        = "Smagorinsky2D"
+erf.Cs              = 0.25  # WRF default
+
+#erf.molec_diff_type = "None"
+#erf.molec_diff_type = "Constant"
+#erf.dynamic_viscosity = 1e-5
+#erf.dynamic_viscosity = 0.01
+
+erf.abl_driver_type = "None"
+erf.use_coriolis    = true
+erf.latitude        = 35.85
+
+erf.rayleigh_damp_W   = true
+erf.rayleigh_zdamp    = 3000. # [m]
+erf.rayleigh_dampcoef = 0.01666666667  # [s-1] ==> tau = 60 s
+
+# advection schemes following PINACLES
+erf.dycore_horiz_adv_type       = "WENO5"
+erf.dycore_vert_adv_type        = "WENO5"
+erf.dryscal_horiz_adv_type      = "WENOZ5"
+erf.dryscal_vert_adv_type       = "WENOZ5"
+erf.moistscal_horiz_adv_type    = "WENOZ5"
+erf.moistscal_vert_adv_type     = "WENOZ5"
+
+
+# INITIALIZATION WITH REAL DATA 
+# inputs from generate_inputs_from_hrrr.ipynb
+erf.init_type      = "WRFInput"
+erf.rebalance_wrfinput = 1 # otherwise initial state may be inconsistent with EOS
+erf.real_set_width = 1
+erf.real_width     = 10
+erf.nc_init_file_0 = "wrfinput_d01"
+erf.nc_bdy_file    = "wrfbdy_d01"
+erf.nc_low_file    = "wrflowinp_d01"
+
+# SAMPLING
+erf.do_line_sampling = true               # Do line sampling
+erf.sampler_interval = 1
+erf.sample_line_lo   = 116 57   0
+erf.sample_line_hi   = 116 57 199
+erf.sample_line_dir  = 2
+erf.line_sampling_vars = x_velocity y_velocity magvel theta density qv qc
+erf.line_sampling_text_output = true      # Output like tslist
